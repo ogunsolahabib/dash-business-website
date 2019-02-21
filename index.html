@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  /*margin: 0 auto;*/
+  /*max-width: 600px;*/
+  background: #232323;
+}
+
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+
+nav .navarea{
+ 
+  color:#444;
+  height:30px;
+  margin-right:5px;
+ 
+  }
+
+nav ul{
+  color:white;
+  text-align:right;
+  padding:5px 2px 5px 10px;
+  
+  }
+nav li{
+  margin: 1rem;
+  list-style:none;
+  display:inline;
+  color:white;
+  background: white;
+  padding: 0.5rem;
+  border-radius:5px;
+  
+  }
+nav a{
+  text-decoration:none;
+  color:#232323;
+  }
+.navbtn{
+  float: right;
+  }
+ .bar1, .bar2, .bar3{
+  background:white;
+  margin-bottom:6px;
+  width:20px;
+  height:2px;
+  }
+.show-nav .navarea{
+  
+  opacity:1;
+  }
+  
+.desc{opacity:0.3}
+
+
+
+.show-description .desc {
+  
+  opacity:1;
+}
+.show-description .price {
+  
+  display:inline;
+}
+
+
+
+
+.grid-wrapper {
+  display: grid;
+  grid-gap: 20px;
+  
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.zone {
+  
+  color: #fff;
+  font-size: 2em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+
+}
+.box >img {
+  width: 100%;
+  
+  cursor: pointer;
+
+}
+.box {
+  background-color: #444;
+  
+  margin: 15px;
+}
+.price {
+  float:right;
+  display:none;
+}
+#contact{
+  text-align: center;
+  font-size:26px;
+  color:white;
+}
+
+  
+}
+@media (max-width: 500px) {
+  nav{
+    width:100%;
+  }
+  nav li{
+    padding: 5px;
+    margin: 2px;
+    }
+  .navbtn{display:none}
+  h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+ 
+  p {
+    font-size: 20px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>SBA Barbershop</h1>
+<h2></h2>
+<nav>
+<ul>
+<span class="navarea">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Services</a></li>
+  
+  <li><a href="#contact">Contact</a></li>
+  
+
+</span>
+  <span class="navbtn">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </span>
+  </ul>
+</nav>
+
+<div class="maincontent">
+  <div class="grid-wrapper zone">
+    <div class="box zone">
+    <img class= "img" src="https://www.menshairstylestoday.com/wp-content/uploads/2018/01/Afro-with-Curls.jpg">
+      <p class= "desc">afro <span class="price">$14</span></p>
+    </div>
+    
+    <div class="box zone">
+      <img class= "img" src="https://www.menshairstylestoday.com/wp-content/uploads/2017/06/Waves-with-Low-Bald-Fade-and-Line-Up.jpg">
+      <p class="desc">waves <span class="price">$22</span>
+     </p>
+    </div>
+      
+    <div class="box zone">
+      <img class= "img" src=https://www.menshairstylestoday.com/wp-content/uploads/2017/12/Drop-Fade-Afro.jpg>
+      <p class= "desc">fade <span class="price">$8</span></p>
+    </div>
+    <div class="box zone">
+      <img class= "img" src=http://spongecuts.com/wp-content/uploads/2016/02/Curl-Sponge-Twist-Brush-31.jpg>
+      <p class= "desc">curl <span class="price">$8</span></p>
+    </div>
+  
+  </div>
+  
+  <div id="contact"><p name="contact">Visit us at 14, PPL street, Maryland, Lagos</p></div>
+</div>
+<script>
+$('div').on('click', function() {
+  $(this).toggleClass('show-nav');
+  });
+$('.desc').on('click', function() {
+  $(this).toggleClass('show-description');
+  });
+
+</script>
+
+</body>
